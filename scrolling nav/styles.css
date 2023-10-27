@@ -1,0 +1,154 @@
+html, 
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    text-decoration: none;
+    background-color: #85dcb8;
+    scroll-behavior: smooth;
+}
+#Links-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #e27d60;
+    height: 20vh;
+    align-items: center;
+    position: relative;
+    box-shadow: 0px 5px 5px 5px #41b3a3;
+}
+#Links-container.active {
+    position: sticky;
+    background-color: #C38D9E;
+    top: 0;
+}
+#Brand-container {
+    width: 4rem;
+    height: 4rem;
+    background-color: aqua;
+    background-image: url("logo.jpg");
+    background-size: cover;
+    margin-left: 2rem;
+}
+   
+#Links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 2rem;
+    box-shadow: #dea190;
+}
+#Links li {
+    list-style: none;
+}
+#Links li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #85dcb8;
+}
+#burger {
+    width: 7vh;
+    height: 7vh;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-right: 2rem;
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 1.2rem;
+}
+#burger:hover {
+    cursor: pointer;
+}
+#burger div {
+    background-color: black;
+    width: 100%;
+    height: 6px;
+}
+#banner,
+#about,
+#tours {
+    height: 80vh;
+    text-align: center;
+    margin: 1rem;
+}
+h1 {
+    font-size: 2rem;
+}
+h2 {
+    font-size: 2rem;
+}
+.content {
+    font-family: 'Shantell Sans';
+}
+#home {
+    cursor: pointer;
+}
+.marketing {
+    font-family: 'Shantell Sans';
+}
+.email-btn {
+    padding: 1rem;
+    border-radius: 15px;
+    font-size: 1rem;
+    background-color: #e27d60;
+    color: #85dcb8;
+    font-family: 'Tilt Warp';
+}
+.email-btn:hover {
+    cursor: pointer;
+    color: #e27d60;
+    background-color: aqua;
+}
+.section {
+    margin-top: 20vh;
+    height: 80vh;
+    text-align: center;
+}
+#toTop {
+    width: 60px;
+    height: 60px;
+    background-color: beige;
+    display: none;
+    font-size: 30px;
+    position: sticky;
+    bottom: 3rem;
+    border-radius: 5px;
+    right: 3rem;
+    float: right;
+}
+#toTop.active {
+    display: inline-block;
+    cursor: pointer;
+}
+footer p {
+    text-align: center;
+}
+
+@media screen and (max-width:700px) {
+    #Links {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        opacity: 0;
+        height: 0px;
+        align-items: center;
+        width: 100%;
+    }
+    #Links.active {
+        opacity: 1;
+        height: auto;
+        transition: all .3s ease-in;
+    }
+    #burger {
+        display: flex;
+    }
+    #Links-container {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+
+    }
+}
